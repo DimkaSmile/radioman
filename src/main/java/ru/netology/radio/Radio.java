@@ -3,6 +3,21 @@ package ru.netology.radio;
 public class Radio {
     private int currentChanel;
     private int currentVolume;
+    private int numberChanel = 10-1;
+
+
+    public Radio(int numberChanel) {
+        this.numberChanel = numberChanel - 1;
+    }
+
+    public Radio(){
+
+    }
+
+    public int getNumberChanel() {
+        return this.numberChanel;
+    }
+
 
     public int getCurrentChanel() {
         return currentChanel;
@@ -47,4 +62,5 @@ public class Radio {
     public void down() {
         setCurrentVolume(currentVolume = currentVolume -1);
     }
+
 }
